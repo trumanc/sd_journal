@@ -25,4 +25,5 @@ public class Factor {
     public static String printableTime(Calendar time) {
         return time.get(Calendar.HOUR) + ":" + time.get(Calendar.MINUTE) + " " + time.get(Calendar.AM_PM);
     }
+
 }

@@ -5,12 +5,18 @@ import android.util.Log;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 /**
  * Created by truman on 2/24/15.
  */
 public class DayRecord implements Serializable {
     // Serializable so we can write/read this object directly from a file.
+
+    public DayRecord(int year, int month, int day) {
+        // Every other piece of information is input by the user, but actual date must be set now
+        date = new GregorianCalendar(year, month, day);
+    }
 
     public Calendar date; // Only day/month/year fields
 
@@ -106,4 +112,10 @@ public class DayRecord implements Serializable {
     public boolean nightmareFlag;
     public boolean lucidFlag;
     public boolean recurringFlag;
+
+
+    public boolean isIncomplete() {
+        // TODO: returns true if any of the objects/times/alertness values are null
+        return true;
+    }
 }

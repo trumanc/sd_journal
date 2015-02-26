@@ -6,19 +6,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class DayInputActivity extends ActionBarActivity {
+public class GoingToSleep extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_day_input);
+        setContentView(R.layout.activity_going_to_sleep);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_day_input, menu);
+        getMenuInflater().inflate(R.menu.menu_going_to_sleep, menu);
         return true;
     }
 
