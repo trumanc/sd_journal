@@ -6,12 +6,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class GoingToSleep extends ActionBarActivity {
+public class WakingUp extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_going_to_sleep);
+        setContentView(R.layout.activity_waking_up);
     }
 
 

@@ -16,6 +16,12 @@ public class DayRecord implements Serializable {
     public DayRecord(int year, int month, int day) {
         // Every other piece of information is input by the user, but actual date must be set now
         date = new GregorianCalendar(year, month, day);
+
+        alertnessArray = new Alertness[12];
+
+        for (int i = 0; i < 12; i++) {
+            alertnessArray[i] = Alertness.VAL6;
+        }
     }
 
     public Calendar date; // Only day/month/year fields
@@ -117,5 +123,10 @@ public class DayRecord implements Serializable {
     public boolean isIncomplete() {
         // TODO: returns true if any of the objects/times/alertness values are null
         return true;
+    }
+
+    @Override
+    public String toString() {
+        return "day of record: " + date.get(Calendar.DAY_OF_MONTH);
     }
 }

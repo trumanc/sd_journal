@@ -12,7 +12,7 @@ public enum Alertness {
     VAL4("Very tired, but not sleepy/drowsy. \"I am sooo tired but am definitely awake.\"", 4),
     VAL5("Unambiguously sleepy/drowsy, making a conscious effort to stay awake.\"I just can’t keep my eyes open.\" ", 5),
     
-    VAL6("Asleep.", Integer.MAX_VALUE); // This val should never be used in calculations
+    VAL6("Asleep.", 6); // This val should never be used in calculations
 
 
     private String description;
@@ -28,9 +28,6 @@ public enum Alertness {
     }
 
     int getValue() {
-        if (this == VAL6) {
-            Log.e("alertness", "Incorrectly asked VAL6 for integer value");
-        }
         return value;
     }
 }

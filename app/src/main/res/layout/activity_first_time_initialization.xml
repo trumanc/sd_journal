@@ -1,0 +1,165 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="edu.stanford.trumanc.sleepjournal.FirstTimeInitializationActivity"
+    android:onClick="onSubmit"
+    android:nestedScrollingEnabled="false">
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Start date (as listed on your spreadsheet)"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                android:id="@+id/startDatePrompt" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/startDatePrompt"
+
+                android:inputType="none"
+                android:ems="10"
+                android:id="@+id/startDateText"
+                android:clickable="false"
+                android:editable="false"
+                android:text="Not selected" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/startDateText"
+                android:text="Pick date"
+                android:id="@+id/startDateButton"
+                android:onClick="onPickDateClick"
+                android:layout_alignBottom="@+id/startDateText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/startDateText"
+                android:text="\nHow many days will you be collecting data?"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                android:id="@+id/numDaysText" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/numDaysInput"
+                android:hint="49"
+                android:text="49"
+                android:editable="false"
+                android:clickable="false"
+                android:layout_below="@+id/numDaysText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/numDaysInput"
+                android:text="\nWhat is your name? (Used when emailing the TAs)"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                android:id="@+id/namePromptText" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords"
+                android:ems="10"
+                android:id="@+id/nameInputText"
+                android:editable="false"
+                android:clickable="false"
+                android:hint="Name:"
+                android:layout_below="@+id/namePromptText" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nameInputText"
+                android:text="\nWhat is your SUId Number? (Used when emailing the TAs)"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                android:id="@+id/sunetIDPromptText" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/sunetIdInputText"
+                android:editable="false"
+                android:clickable="false"
+                android:hint="SUNet ID: (starting with 05...)"
+                android:layout_below="@+id/sunetIDPromptText"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/sunetIdInputText"
+                android:text="\nWhat is the email address of the TA you will send your weekly data to?"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                android:id="@+id/taEmailPromptText"
+                android:inputType="none" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/taEmailInputText"
+                android:editable="false"
+                android:clickable="false"
+                android:hint="TA&apos;s email:"
+                android:layout_below="@+id/taEmailPromptText"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/taEmailInputText"
+                android:text="What is your email address? (to send the weekly data to)"
+                android:textSize="24sp"
+                android:gravity="center_horizontal"
+                android:id="@+id/studentEmailText"
+                android:inputType="none" />
+
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/studentEmailInputText"
+                android:editable="false"
+                android:clickable="false"
+                android:hint="SUNet ID: (starting with 05...)"
+                android:layout_below="@+id/studentEmailText"
+                android:inputType="textEmailAddress"
+                android:onClick="onSubmit" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:id="@+id/button"
+                android:layout_below="@+id/studentEmailInputText"
+                android:layout_alignParentRight="true"
+                android:onClick="onSubmit" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

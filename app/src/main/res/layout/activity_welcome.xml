@@ -21,35 +21,19 @@
             android:textStyle="bold"
             android:gravity="center_horizontal" />
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:id="@+id/pickStartDateLayout"
-            android:visibility="gone">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="You need to enter a start date for data collection. This should be the first day listed on your Sleep Journal sheet."
-                android:textSize="28sp"
-                android:gravity="center_horizontal"
-                android:id="@+id/textView2" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pick a Start Date"
-                android:id="@+id/button"
-                android:onClick="onPickDateClick" />
-        </LinearLayout>
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/comeBackLater"
+            android:textSize="36sp" />
 
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:id="@+id/selectDataDateLayout">
+            android:id="@+id/selectDataDateLayout"
+            android:gravity="center_horizontal">
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -59,23 +43,41 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Go To Today"
-                    android:id="@+id/goToTodayButton"
-                    android:layout_weight="1" />
+                    android:text="Edit Today&apos;s Data"
+                    android:id="@+id/wakeSleepButton"
+                    android:layout_weight="1"
+                    android:onClick="onEditTodayClick" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Email Data"
-                    android:id="@+id/button2"
+                    android:id="@+id/emailDataButton"
                     android:layout_weight="1" />
             </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Select a day to edit:"
+                android:id="@+id/textView3" />
 
             <CalendarView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/calendarView"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:visibility="visible" />
+
         </LinearLayout>
 
     </LinearLayout>

@@ -17,8 +17,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".GoingToSleep"
+            android:name=".WakingUp"
             android:label="@string/title_activity_going_to_sleep" >
+        </activity>
+        <activity
+            android:name=".FirstTimeInitializationActivity"
+            android:label="@string/title_activity_first_time_initialization" >
+        </activity>
+        <activity
+            android:name=".EditDayActivity"
+            android:label="@string/title_activity_edit_day" >
+        </activity>
+        <activity
+            android:name=".GoingToSleepActivity"
+            android:label="@string/title_activity_going_to_sleep"
+            android:parentActivityName=".EditDayActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.stanford.trumanc.sleepjournal.EditDayActivity" />
         </activity>
     </application>
 
